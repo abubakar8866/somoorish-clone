@@ -3,6 +3,7 @@
     padding: 0px;
     box-sizing: border-box;
     text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 header{
@@ -79,17 +80,17 @@ header{
 
 .main{
     display: flex;
-    margin-top: 20px;
     justify-content: center;
     align-items: center;
     width: 100%;
+    background-color: rgb(229, 237, 245);
 }
 
 .products{
     display: flex;
     flex-direction: column;
     width: 80%;
-    margin: 0px auto;
+    justify-content: center;
 }
 
 .products .upper{
@@ -99,23 +100,38 @@ header{
 }
 
 .upper p{
-    font-size: 20px;
+    margin: 30px 0px 20px 0px;
+    font-weight: bolder;
+    font-size: 25px;
 }
 
 .products .lower{
     display: grid;
-    grid-template-columns: repeat(4,minmax(150px,1fr));
-    grid-template-rows: repeat(4,minmax(100%,auto));
-    gap: 10px;
-    justify-content: stretch;
+    grid-template-columns: repeat(4,266px);
+    grid-template-rows: repeat(3,1fr);
+    gap: 30px;
+    justify-content: center;
     align-items: stretch;
 }
 
-.lower .cart{
+.lower .cart {
     border: 1px solid black;
-    border-radius: 10px;
+    border-radius: 20px;
     overflow: hidden;
-    padding: 15px;
+    padding: 20px;
+    background-color: white;
+}
+
+.icart1 img {
+    transition: transform 0.5s ease-in-out;
+}
+
+.lower .cart:hover .icart1 img {
+    transform: scale(1.1);
+}
+
+.lower .cart:hover .icart2 .top a {
+    text-decoration: underline;
 }
 
 .cart .icart1{
@@ -123,19 +139,23 @@ header{
     justify-content: center;
     align-items: center;
     position: relative;
+    overflow: hidden;
 }
 
 .icart1 img{
-    width: 100%;
-    height: 100%;
+    width: 233px;
+    height: 299px;
 }
+
 
 .icart1 span{
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgb(239, 240, 245);
     padding: 5px 10px;
+    border: 1px solid rgb(0,0,0,0.1);
+    z-index: 1;
 }
 
 .icart2{
@@ -159,7 +179,71 @@ header{
 .bottom button{
     width: 100%;
     border: 1px solid gray;
-    border-radius: 10px;
-    padding: 8px;
+    border-radius: 20px;
+    padding: 15px;
     font-size: 15px;
+    background-color: rgb(255, 255, 255,1);
+    cursor: pointer;
+}
+
+.choco{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(229, 237, 245);
+    margin-bottom: 20px;
+}
+
+.choco .ichoco{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.ichoco .upr{
+    padding: 40px 0px 20px 0px;
+}
+
+.ichoco .lwr{
+    display: flex;
+    gap: 20px;
+}
+
+.lwr .ilwr{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.ilwr .iupr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iupr img{
+    width: 100%;
+}
+
+.iilwr a{
+    word-spacing: 2px;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.iilwr a:hover{
+    text-decoration: underline;
+}
+
+.iilwr p{
+    font-weight: lighter;
+    font-variant: normal;
 }
