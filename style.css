@@ -1,0 +1,165 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 0px;
+    gap: 10px;
+}
+
+.div1{
+    width: 80%;
+    margin: 0vw 10vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.div2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    color: rgb(0, 0, 0,0.75);
+    a{
+        color: rgb(0, 0, 0,0.75);
+    }
+}
+
+.media{
+    width: 100%;
+    overflow: hidden;
+    height: max-content;
+    margin: 0px 0px;
+    position: relative;
+}
+
+.media .frontImg{
+    width: 100%;
+}
+
+.media .frontImg img{
+    width: 100%;
+    height: 80vh;
+}
+
+.media .floatingDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    z-index: 1000;
+    top: 50px;
+    right:200px;
+    background-color: rgb(228, 14, 82);
+    padding: 30px;
+    border-radius: 20px;
+    width: 32vw;
+    color: white;
+    font-size: 30px;
+    button{
+        width: 50%;
+        font-size: 30px;
+        padding: 8px;
+        border: 2px solid white;
+        border-radius: 20px;
+        color: white;
+        background-color: transparent;
+        cursor: pointer;
+    }
+}
+
+.main{
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.products{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0px auto;
+}
+
+.products .upper{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.upper p{
+    font-size: 20px;
+}
+
+.products .lower{
+    display: grid;
+    grid-template-columns: repeat(4,minmax(150px,1fr));
+    grid-template-rows: repeat(4,minmax(100%,auto));
+    gap: 10px;
+    justify-content: stretch;
+    align-items: stretch;
+}
+
+.lower .cart{
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 15px;
+}
+
+.cart .icart1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.icart1 img{
+    width: 100%;
+    height: 100%;
+}
+
+.icart1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 5px 10px;
+}
+
+.icart2{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.icart2 .top{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.top a{
+    text-decoration: none;
+    color: black;
+    font-weight: lighter;
+}
+
+.bottom button{
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 8px;
+    font-size: 15px;
+}
