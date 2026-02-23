@@ -3,7 +3,7 @@
     padding: 0px;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: GTStandard-M, sans-serif;
 }
 
 header{
@@ -32,7 +32,50 @@ header{
     color: rgb(0, 0, 0,0.75);
     a{
         color: rgb(0, 0, 0,0.75);
+        transition: all 0.5s ease-in-out;
     }
+}
+
+
+.div2 a:hover{
+    text-decoration: underline;
+}
+
+.innerdiv2{
+    position: relative;
+}
+
+.innerdiv2:hover{
+    .poppup{
+        display: flex;
+    }
+}
+
+.poppup{
+    display: none;
+    padding: 13px;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #9d274a;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    z-index: 1001;
+    width: 12vw;
+    border-radius: 10px;
+    transition: all 1s ease-in-out;
+}
+
+.poppup a{
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+    color: white;
+    font-size: 15px;
+    word-spacing: 2px;
+}
+
+.poppup a:hover{
+    text-decoration: underline;
 }
 
 .media{
@@ -65,7 +108,7 @@ header{
     border-radius: 20px;
     width: 32vw;
     color: white;
-    font-size: 30px;
+    font-size: 25px;
     button{
         width: 50%;
         font-size: 30px;
@@ -192,14 +235,13 @@ header{
     align-items: center;
     width: 100%;
     background-color: rgb(229, 237, 245);
-    margin-bottom: 20px;
 }
 
 .choco .ichoco{
     width: 80%;
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 }
 
 .ichoco .upr{
@@ -246,4 +288,102 @@ header{
 .iilwr p{
     font-weight: lighter;
     font-variant: normal;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #9d274a;
+    color: white;
+    padding: 30px 0px 50px 0px;flex-direction: column;
+    gap: 40px;
+}
+
+footer .top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+footer .top h1{
+    font-size: 50px;
+}
+
+footer .top p{
+    word-spacing: 2px;
+}
+
+footer .top .email{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.email input{
+    width: 50vh;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 15px 30px 15px 15px;
+    font-size: 20px;
+    color: white;
+}
+
+.email i{
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    z-index: 1;
+    color: white;
+    cursor: pointer;
+}
+
+footer .top .shp{
+    display: flex;
+    gap: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: blueviolet;
+}
+
+.shp p{
+    word-spacing: normal;
+}
+
+footer .bottom{
+    border-top: 0.1px solid white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0px 0px 0px;
+}
+
+.bottom .imp-link{
+    display: flex;
+    gap: 5px;
+    font-size: 10px;
+}
+
+.imp-link a{
+    text-decoration: none;
+    color: white;
+    transition: all 0.5s ease-in-out;
+}
+
+.imp-link a:hover{
+    text-decoration: underline;
+}
+
+#gp{
+    margin-right: 10px;
+}
+
+.imp-link ul{
+    display: flex;
+    gap: 20px;
 }
