@@ -1,3 +1,7 @@
+html {
+    font-size: clamp(14px, 1vw, 16px);
+}
+
 *{
     margin: 0px;
     padding: 0px;
@@ -16,8 +20,10 @@ header{
 }
 
 .div1{
-    width: 80%;
-    margin: 0vw 10vw;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -51,27 +57,29 @@ header{
     }
 }
 
-.poppup{
+.poppup {
     display: none;
-    padding: 13px;
+    padding: 0.8rem;
     flex-direction: column;
-    gap: 15px;
+    gap: 1rem;
     background-color: #9d274a;
     position: absolute;
-    top: 25px;
+    top: 1.5rem;
     left: 0;
     z-index: 1001;
-    width: 12vw;
-    border-radius: 10px;
-    transition: all 1s ease-in-out;
+    width: max-content;
+    min-width: 180px;
+    max-width: 90vw;
+    border-radius: 0.6rem;
+    transition: 0.3s ease;
 }
 
-.poppup a{
+.poppup a {
     text-decoration: none;
-    transition: all 0.5s ease-in-out;
+    transition: 0.3s ease;
     color: white;
-    font-size: 15px;
-    word-spacing: 2px;
+    font-size: clamp(0.85rem, 1vw, 1rem);
+    word-spacing: 0.1rem;
 }
 
 .poppup a:hover{
@@ -90,29 +98,31 @@ header{
     width: 100%;
 }
 
-.media .frontImg img{
+.media .frontImg img {
     width: 100%;
-    height: 80vh;
+    height: auto;
+    max-height: 80vh;
+    object-fit: cover;
 }
 
 .media .floatingDiv{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.25rem;
     position: absolute;
     z-index: 1000;
     top: 50px;
-    right:200px;
+    right:5%;
     background-color: rgb(228, 14, 82);
     padding: 30px;
     border-radius: 20px;
-    width: 32vw;
+    width: min(90%, 400px);
     color: white;
-    font-size: 25px;
+    font-size: clamp(1rem, 2vw, 1.5rem);
     button{
         width: 50%;
-        font-size: 30px;
-        padding: 8px;
+        font-size: clamp(0.9rem, 1.5vw, 1.3rem);
+        padding: 0.5rem 1rem;
         border: 2px solid white;
         border-radius: 20px;
         color: white;
@@ -142,17 +152,17 @@ header{
     align-items: center;
 }
 
-.upper p{
-    margin: 30px 0px 20px 0px;
+.upper p {
+    margin: 1.875rem 0 1.25rem 0;
+    font-size: 1.5rem;
     font-weight: bolder;
-    font-size: 25px;
 }
 
 .products .lower{
     display: grid;
-    grid-template-columns: repeat(4,266px);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     grid-template-rows: repeat(3,1fr);
-    gap: 30px;
+    gap: 1.875rem;
     justify-content: center;
     align-items: stretch;
 }
@@ -161,7 +171,7 @@ header{
     border: 1px solid black;
     border-radius: 20px;
     overflow: hidden;
-    padding: 20px;
+    padding: 1.25rem;
     background-color: white;
 }
 
@@ -185,9 +195,9 @@ header{
     overflow: hidden;
 }
 
-.icart1 img{
-    width: 233px;
-    height: 299px;
+.icart1 img {
+    width: 100%;
+    height: auto;
 }
 
 
@@ -245,22 +255,24 @@ header{
 }
 
 .ichoco .upr{
-    padding: 40px 0px 20px 0px;
+    padding: 2.5rem 0 1.25rem 0;
 }
 
 .ichoco .lwr{
     display: flex;
-    gap: 20px;
+    gap: 1.25rem;
+    flex-wrap: wrap;
 }
 
 .lwr .ilwr{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.25rem;
     border: 1px solid black;
     padding: 20px;
     border-radius: 20px;
     background-color: white;
+    flex: 1 1 220px;
 }
 
 .ilwr .iupr{
@@ -308,8 +320,8 @@ footer .top{
     gap: 30px;
 }
 
-footer .top h1{
-    font-size: 50px;
+footer .top h1 {
+    font-size: clamp(1.8rem, 4vw, 3rem);
 }
 
 footer .top p{
@@ -323,7 +335,8 @@ footer .top .email{
 }
 
 .email input{
-    width: 50vh;
+    width: 100%;
+    max-width: 400px;
     background-color: transparent;
     border: 2px solid white;
     border-radius: 15px;
@@ -363,6 +376,10 @@ footer .bottom{
     padding: 40px 0px 0px 0px;
 }
 
+.bottom img{
+    width: 30%;
+}
+
 .bottom .imp-link{
     display: flex;
     gap: 5px;
@@ -385,5 +402,44 @@ footer .bottom{
 
 .imp-link ul{
     display: flex;
-    gap: 20px;
+    gap: 1.25rem;
+}
+
+@media (max-width: 768px) {
+
+    .div1 {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .div2 {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .media .floatingDiv {
+        position: static;
+        margin: 20px auto;
+        width: 90%;
+        text-align: center;
+    }
+
+    footer .top h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .bottom .imp-link {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imp-link ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bottom img{
+        width: 50%;
+    }
 }
